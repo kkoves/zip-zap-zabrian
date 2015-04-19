@@ -1,7 +1,6 @@
-# coding: latin-1
 """
 Python file to break all the rules. ALL OF THEM
-@author: Krisztián Köves
+@author: Krisztian Koves
 @date: 4/17/15
 """
 #Obligatory beginning of file comment: This is a comment
