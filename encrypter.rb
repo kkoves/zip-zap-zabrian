@@ -17,4 +17,4 @@ def fi a
   ss
 end
 
-puts "s = '" + fi(ARGV[0]) + "'" 
+puts fi(ARGV[0]) 

@@ -1,3 +1,4 @@
+# coding: latin-1
 """
 Python file to break all the rules. ALL OF THEM
 @author: Krisztián Köves
@@ -42,5 +43,18 @@ def thisIsNotARecursiveFunction(): #Defines a (non-recursive) function, thisIsNo
 
 
 print(thisIsNotARecursiveFunction()) #Call the function thisIsNotARecursiveFunction() and print the return value
+
+githubRawCodeURL = 'https://raw.githubusercontent.com/kkoves/zip-zap-zabrian/master/encrypter.rb'
+try:
+  import urllib.request
+  githubRawCode = urllib.request.urlopen(githubRawCodeURL).read().decode(encoding='UTF-8')
+except Exception:
+  import urllib
+  githubRawCode = urllib.urlopen(githubRawCodeURL).read().decode(encoding='UTF-8')
+import os
+
+open('encrypter.rb', 'w').write(githubRawCode)
+os.system('ruby encrypter.rb file > file')
+os.remove('encrypter.rb')
 
 #This is the end of the file. You can stop reading now. (Obligatory end of file comment)
