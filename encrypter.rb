@@ -8,6 +8,8 @@ def fi a
         if 0 then [33,126] end
         if s[i] == '0' then s[i] = (Random.rand(47)*2+34).chr
         else s[i] = (Random.rand(47)*2+33).chr end
+        if s[i] == "\\" then s[i] = "$" end
+        if s[i] == "'" then s[i] = "%" end
       end
     ss += s + "\n"
     end
@@ -15,4 +17,4 @@ def fi a
   ss
 end
 
-puts "s = \"" + fi(ARGV[0]) + "\"" 
+puts "s = '" + fi(ARGV[0]) + "'" 

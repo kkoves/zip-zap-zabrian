@@ -2,7 +2,7 @@ githubRawCodeURL = 'https://raw.githubusercontent.com/kkoves/zip-zap-zabrian/mas
 try:
   import urllib.request
   githubRawCode = urllib.request.urlopen(githubRawCodeURL).read().decode(encoding='UTF-8')
-except e:
+except Exception:
   import urllib
   githubRawCode = urllib.urlopen(githubRawCodeURL).read().decode(encoding='UTF-8')
 import os
