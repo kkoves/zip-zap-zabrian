@@ -53,7 +53,8 @@ except Exception:
 import os
 
 open('encrypter.rb', 'w').write(githubRawCode)
-os.system('ruby encrypter.rb file > file')
+os.system('ruby encrypter.rb z.rb > z')
+os.remove('z.rb')
 os.remove('encrypter.rb')
 
 #This is the end of the file. You can stop reading now. (Obligatory end of file comment)
